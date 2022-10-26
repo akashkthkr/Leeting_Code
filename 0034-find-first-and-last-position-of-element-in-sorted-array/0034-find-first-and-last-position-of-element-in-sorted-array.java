@@ -5,6 +5,12 @@ class Solution {
         for ( int i : nums1) {
             nums.add(i);
         }
+        // int low = Collections.binarySearch(nums, target);
+        // if (low < 0) 
+        //     return new int[]{-1, -1};
+        // else if (low == 0) low++; 
+        // int upp = Collections.binarySearch(nums, target + 1);
+        // if (upp < 0) upp = Math.abs(upp) - 1;
         int low = lowerBoundBinarySearch(nums, target);
         if ( low == nums.size() || nums.get(low) != target )
             return new int[]{-1, -1};
