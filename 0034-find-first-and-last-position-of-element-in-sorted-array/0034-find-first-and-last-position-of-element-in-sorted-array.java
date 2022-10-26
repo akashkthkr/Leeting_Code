@@ -1,14 +1,9 @@
 class Solution {
     public int[] searchRange(int[] nums1, int target) {
         List<Integer> ans = new ArrayList<>();
-        List<Integer> nums = new ArrayList<>(nums1.length);
-        for ( int i : nums1) {
-            nums.add(i);
-        }
+        List<Integer> nums = new ArrayList<Integer>() {{ for (int i : nums1) add(i); }};
         // int low = Collections.binarySearch(nums, target);
-        // if (low < 0) 
-        //     return new int[]{-1, -1};
-        // else if (low == 0) low++; 
+        // if (low < 0) return new int[]{-1, -1};
         // int upp = Collections.binarySearch(nums, target + 1);
         // if (upp < 0) upp = Math.abs(upp) - 1;
         int low = lowerBoundBinarySearch(nums, target);
