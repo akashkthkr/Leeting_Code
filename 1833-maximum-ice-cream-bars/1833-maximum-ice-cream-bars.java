@@ -9,6 +9,8 @@ class Solution {
             if (coins >= i) {
                 coins -= i;
                 noOfBars++;
+            } else {
+                return noOfBars;
             }
         }
         return noOfBars;  
