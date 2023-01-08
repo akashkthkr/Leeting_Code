@@ -7,7 +7,7 @@ class Solution {
             HashMap<Double, Integer> slopeMap = new HashMap<>();
             for (int j = 0; j < points.length; j++) {
                 if ( i != j) {
-                    double slopeWrtPoint = (points[j][1] - points[i][1])/ (double) (points[j][0] - points[i][0]);
+                    double slopeWrtPoint = Math.atan2((points[j][1] - points[i][1]), (points[j][0] - points[i][0]));
                     slopeMap.put(slopeWrtPoint, slopeMap.getOrDefault(slopeWrtPoint, 0) + 1);
                 }
             }
